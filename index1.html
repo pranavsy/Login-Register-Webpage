@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CN Project</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        #header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .person {
+            display: inline-block;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+        .person img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .person p {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        #navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        #navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        #logout {
+            float: right;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        #logout:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resumes</a>
+        <a id="logout" href="http://192.168.10.17:5000">Logout</a>
+    </div>
+
+    <div id="header">
+        <h1>CN Project</h1>
+        <p>By Ishaan HU22CSEN0101598, Pranav HU22CSEN0100148, Priyanshu HU22CSEN0100478</p>
+    </div>
+
+    <div id="content">
+        <div class="person" onclick="openPDF('ishaan.pdf')">
+            <img src="ishaan.png" alt="Ishaan">
+            <p>Ishaan</p>
+        </div>
+        <div class="person" onclick="openPDF('pranav.pdf')">
+            <img src="pranav.png" alt="Pranav">
+            <p>Pranav</p>
+        </div>
+        <div class="person" onclick="openPDF('priyanshu.pdf')">
+            <img src="priyanshu.png" alt="Priyanshu">
+            <p>Priynshu</p>
+        </div>
+    </div>
+
+    <script>
+        function openPDF(pdfPath) {
+            window.open(pdfPath, '_blank');
+        }
+    </script>
+</body>
+
+</html>
+
+
+
